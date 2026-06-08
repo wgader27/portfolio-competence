@@ -1,0 +1,157 @@
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.shape {
+    position: absolute;
+    animation: float 8s ease-in-out infinite;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(120, 76, 251, 0.2);
+    top: 15%;
+    left: 10%;
+    animation-delay: 0.5s;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(120, 76, 251, 0.15);
+    top: 20%;
+    right: 15%;
+    animation-delay: 1.5s;
+    transform: rotate(45deg);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 86px solid rgba(120, 76, 251, 0.1);
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.x-shape {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    right: 20%;
+}
+
+.x-shape::before,
+.x-shape::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(120, 76, 251, 0.25);
+    border-radius: 5px;
+}
+
+.x-shape::before {
+    transform: rotate(45deg);
+}
+
+.x-shape::after {
+    transform: rotate(-45deg);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.countdown {
+    display: flex;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.countdown-box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--main-color);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-one);
+    box-shadow: 0 10px 20px rgba(120, 76, 251, 0.3);
+}
+
+.countdown-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-two);
+    max-width: 800px;
+  }
+  
+.emoji {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 768px) {
+    .countdown {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .countdown-box {
+        width: 80px;
+        height: 80px;
+        margin: 0.5rem;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+}
