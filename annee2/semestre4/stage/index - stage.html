@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage - Encore Design & Communication</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <header id="header">
+      <div class="overlay overlay-lg"></div>
+
+      <nav>
+        <div class="container">
+          <h1>Portfolio de Compétence</h1>
+          <div class="links">
+            <ul>
+              <li><a href="../../../index.html#header">Home</a></li>
+              <li><a href="../../../annee1/index.html">Année 1</a></li>
+              <li><a href="../../../annee2/index.html">Année 2</a></li>
+              <li><a href="../../../annee3/index.html">Année 3</a></li>
+              <li><a href="../../../index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="portfolio-item section">
+      <div class="container">
+        <div class="shapes">
+          <div class="shape circle"></div>
+          <div class="shape square"></div>
+          <div class="shape triangle"></div>
+          <div class="shape x-shape"></div>
+        </div>
+        <div class="section-header">
+          <h3 class="title" data-title="Développer">Stage : Encore Design & Communication</h3>
+          <p class="text">
+            8 semaines, du 13 avril au 5 juin 2026 - Angoulême
+          </p>
+        </div>
+
+        <div class="portfolio-content">
+          <div class="portfolio-description">
+            <h4>Contexte du stage</h4>
+            <p>
+              J'ai réalisé mon stage chez <strong>Encore Design & Communication</strong>, une agence de communication
+              360° à Angoulême. L'équipe est à taille humaine (7 personnes) avec des graphistes, un vidéaste, un
+              alternant, un référenceur SEO, une responsable réseaux sociaux et un intégrateur web (mon tuteur Alex
+              Jolly). Je suis venu compléter l'équipe côté développement.
+            </p>
+            <p>
+              Mon objectif : travailler sur des sites en production, avec de vrais clients qui s'en servent au
+              quotidien. Plutôt que de partir d'une page blanche, j'ai dû reprendre du code écrit par d'autres, faire
+              évoluer des sites existants, et gérer la relation client directement par mail et téléphone. Le fil que
+              j'ai suivi pendant 8 semaines : comment reprendre le site et les services numériques d'une entreprise,
+              du code jusqu'à l'hébergement, sans interrompre son activité.
+            </p>
+
+            <div class="portfolio-img">
+              <img width="10px" height="10px" src="../../../img/sae/stage-1.png" alt="L'agence Encore Design à Angoulême" />
+            </div>
+
+            <h4>Mission principale : reprise du site Elite Group</h4>
+            <p>
+              Elite Group est une agence immobilière de prestige d'Angoulême. Le site existait déjà sous WordPress avec
+              le thème Uncode, mais avec une particularité : les biens immobiliers ne sont pas saisis dans WordPress,
+              ils sont récupérés depuis le CRM de l'agence via une <strong>API REST</strong>, à travers un plugin
+              <strong>Symfony + Twig</strong> développé sur mesure par un développeur précédent.
+            </p>
+            <p>
+              Je n'arrivais donc pas sur une page blanche : j'ai dû lire le code d'un autre développeur, comprendre
+              l'API, puis corriger plusieurs choses. La recherche cassée sur la page d'accueil, la pagination qui ne
+              tournait plus, le remplacement d'un carrousel par une vraie galerie en grille, l'ajout d'un tri sur les
+              annonces (prix, date, surface), et la génération d'étiquettes <strong>DPE en SVG</strong> directement dans
+              les templates Twig.
+            </p>
+            <p>
+              Cette mission m'a permis de valider l'<strong>AC24.03 - Intégrer, produire ou développer des interactions riches</strong>.
+            </p>
+
+            <div class="portfolio-img">
+              <img src="../../../img/sae/stage-2.png" alt="Page de détail d'un bien sur Elite Group" />
+            </div>
+
+            <h4>Hébergement et migration DNS</h4>
+            <p>
+              C'est la partie qui m'a le plus appris, parce que je n'avais jamais touché aux zones DNS, aux
+              enregistrements MX ni aux transferts de domaine. L'agence travaille avec l'hébergeur français
+              <strong>o2switch</strong> et son interface cPanel.
+            </p>
+            <p>
+              Pour Elite Group, j'ai dû basculer le site et les <strong>10 boîtes mail</strong> des employés d'OVH vers
+              o2switch sans interrompre l'activité. J'ai rédigé une notice d'export pour les employés, créé un
+              formulaire pour récupérer leurs identifiants, recréé les 10 comptes sur o2switch, rechargé chaque
+              sauvegarde Thunderbird, puis modifié les enregistrements MX. J'ai également rédigé une notice de
+              configuration de Thunderbird et de Mail d'Apple pour chacun.
+            </p>
+            <p>
+              J'ai refait ce type de migration pour le restaurant <strong>Le Lion Rouge</strong>, et acheté/configuré un
+              nom de domaine pour <strong>bistrot-murier.fr</strong>. La procédure de transfert OVH vers o2switch
+              (désactivation des protections, génération d'un authcode, finalisation de la bascule) est devenue
+              quasiment une routine.
+            </p>
+            <p>
+              Ces opérations valident pour moi l'<strong>AC24.06 - Configurer une solution d'hébergement adaptée aux
+              besoins</strong>.
+            </p>
+
+            <div class="portfolio-img">
+              <img src="../../../img/sae/stage-3.png" alt="Gestion DNS dans cPanel o2switch" />
+            </div>
+
+            <h4>Optimisation SEO avec Yoast</h4>
+            <p>
+              Sur plusieurs sites WordPress de l'agence, dont Elite Group, j'ai travaillé l'optimisation référencement
+              avec le plugin <strong>Yoast SEO</strong>. Concrètement : rédaction de meta titles et meta descriptions
+              uniques sur les articles de blog et les pages clés, choix de mot-clé principal pour chaque contenu, et
+              correction des points remontés par Yoast (longueur des titres, présence du mot-clé dans l'URL et les
+              sous-titres, lisibilité du texte). J'ai aussi optimisé le poids des images et leurs attributs alt pour
+              améliorer le score Lighthouse.
+            </p>
+            <p>
+              Cela m'a permis de valider l'<strong>AC24.05 - Optimiser une application web en termes de référencement
+              et de temps de chargement</strong>.
+            </p>
+            <div class="portfolio-img">
+              <img src="../../../img/sae/stage-4.png" alt="Optimisation SEO avec Yoast" />
+            </div>
+
+            <h4>Refonte créative : la maison de cognac Lhéraud</h4>
+            <p>
+              Mon dernier grand projet, et le plus créatif, a été la refonte complète du site de la maison de cognac
+              Lhéraud. La direction artistique attendue était luxueuse, animée, élégante. J'ai d'abord fait une phase
+              de veille et de benchmark sur Awwwards, construit un moodboard sur Figma, puis maquetté les pages.
+            </p>
+            <p>
+              Côté workflow, j'ai mis en place un vrai pipeline de développeur : code versionné sur GitHub, déploiement
+              automatique sur Vercel à chaque push. Cela me donnait une URL en ligne à jour à chaque modification,
+              parfaite pour montrer mes avancées à mon tuteur sans avoir à uploader manuellement.
+            </p>
+            <p>
+              Techniquement, deux choses m'ont particulièrement marqué. D'abord la <strong>hero section animée</strong> :
+              une vidéo en fond passée comme texture dans un petit programme WebGL avec des shaders, qui applique un
+              effet de liquid distortion révélé au passage du curseur. Ensuite, une <strong>carte 3D interactive du
+              domaine</strong>, réalisée avec la bibliothèque <strong>MapLibre GL JS</strong>, avec une boussole animée
+              en temps réel grâce à GSAP qui pointe toujours vers le nord.
+            </p>
+            <p>
+              Cette partie consolide l'<strong>AC24.03 - Intégrer ou développer des interactions riches</strong>, et
+              cette phase de recherche pour trouver MapLibre et apprendre les shaders WebGL constitue une vraie
+              démarche de veille technologique.
+            </p>
+
+            <div class="portfolio-img">
+              <img src="../../../img/sae/stage-5.png" alt="Carte 3D interactive du domaine Lhéraud" />
+            </div>
+
+            <h4>Autres missions et compétences transversales</h4>
+            <p>
+              En parallèle de ces gros projets, j'ai aussi recodé en HTML les signatures de courriel d'une entreprise
+              du bâtiment (avec toute la galère de compatibilité Outlook / Gmail / Thunderbird), repris le responsive
+              des sites Noona Studio et RD Bois, et ajouté des animations sur RD Bois. Ces missions plus courtes
+              valident l'<strong>AC24.01 - Produire des pages et applications Web responsives</strong>.
+            </p>
+            <p>
+              Côté gestion de projet, l'agence fonctionne avec Trello et des points hebdomadaires : c'est une vraie
+              démarche d'amélioration continue. J'étais en contact direct avec les clients par téléphone, mail et
+              parfois en présentiel, ce qui m'a obligé à rédiger des notices claires pour des personnes qui ne sont pas
+              techniciennes. Tout ça travaille l'<strong>AC25.01</strong>, l'<strong>AC25.04 - Collaborer au sein des
+              organisations</strong> et l'<strong>AC25.05 - Maîtriser les codes des productions professionnelles</strong>.
+              Et la gestion de données sensibles comme les identifiants mail et les informations clients m'a fait
+              toucher à l'<strong>AC25.06 - Prendre en compte les contraintes juridiques</strong>.
+            </p>
+
+            <h4>Bilan</h4>
+            <p>
+              Ces huit semaines m'ont fait toucher à presque toute la chaîne d'un projet web, du code jusqu'à
+              l'hébergement. J'en sors avec une vision beaucoup plus concrète du métier : un développeur ne fait pas
+              que coder, il explique, écrit des notices, et résout des incidents qu'il ne peut pas toujours
+               anticiper. C'est cet aspect "vie réelle" qui m'a le plus marqué.
+            </p>
+            <p>
+              Mon principal axe de progrès reste l'anticipation : sur la migration Elite Group, j'ai trop souvent géré
+              les imprévus au fur et à mesure plutôt que de les prévoir en amont. Si je devais refaire la bascule, je
+              la préparerais mieux (intervention hors horaires de l'agence, vérification des SPF en amont, réduction
+              des durées de propagation DNS). C'est une vraie leçon pour la suite.
+            </p>
+            <p>
+              Le stage s'est tellement bien passé qu'il a été prolongé au-delà de la période initiale. Aujourd'hui, ça
+              me conforte clairement dans l'idée de continuer dans cette voie, et c'est une expérience concrète sur
+              laquelle je vais pouvoir m'appuyer pour la troisième année et mes prochains stages.
+            </p>
+
+            <div class="pdf__container">
+              <h4>Liens du stage</h4>
+              <div class="pdf-files">
+                <a href="https://encore-design.fr" target="_blank">Site Encore Design</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="competences-box">
+            <h4>Compétences développées</h4>
+            <div class="competence-item">
+              <span class="competence-code">AC24.01</span>
+              <p class="competence-desc">Produire des pages et applications Web responsives</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.02</span>
+              <p class="competence-desc">Mettre en place ou développer un back office</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.03</span>
+              <p class="competence-desc">Intégrer, produire ou développer des interactions riches ou des dispositifs interactifs</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.05</span>
+              <p class="competence-desc">Optimiser une application web en termes de référencement et de temps de chargement</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.06</span>
+              <p class="competence-desc">Configurer une solution d'hébergement adaptée aux besoins</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC25.01</span>
+              <p class="competence-desc">Gérer un projet avec une méthode d'amélioration continue (par exemple une méthode agile)</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC25.04</span>
+              <p class="competence-desc">Collaborer au sein des organisations</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC25.05</span>
+              <p class="competence-desc">Maîtriser les codes des productions écrites et orales professionnelles</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC25.06</span>
+              <p class="competence-desc">Prendre en compte les contraintes juridiques</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-4">
+        <div class="grid-4-col footer-about">
+          <h3 class="title-sm">À propos</h3>
+          <p class="text">
+            Portfolio de compétences développées dans le cadre du BUT Métiers du Multimédia et de l'Internet, présentant les différentes SAE réalisées.
+          </p>
+        </div>
+
+        <div class="grid-4-col footer-links">
+          <h3 class="title-sm">Liens</h3>
+          <ul>
+            <li><a href="../../../index.html">Accueil</a></li>
+            <li><a href="../../../annee1/index.html">Année 1</a></li>
+            <li><a href="../../../annee2/index.html">Année 2</a></li>
+            <li><a href="../../../annee3/index.html">Année 3</a></li>
+            <li><a href="../../../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="grid-4-col footer-links">
+          <h3 class="title-sm">Compétences</h3>
+          <ul>
+            <li><a href="#">Design Web</a></li>
+            <li><a href="#">Développement Web</a></li>
+            <li><a href="#">Communication visuelle</a></li>
+            <li><a href="#">Audiovisuel</a></li>
+            <li><a href="#">Gestion de projet</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom-footer">
+        <div class="copyright">
+          <p class="text">
+            Copyright&copy;2026 Tous droits réservés | Réalisé par
+            <span>Wahel</span>
+          </p>
+        </div>
+
+        <div class="followme-wrap">
+          <div class="followme">
+            <h3>Suivez-moi</h3>
+            <span class="footer-line"></span>
+            <div class="social-media">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="back-btn-wrap">
+            <a href="#" class="back-btn">
+              <i class="fas fa-chevron-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function createRandomShapes() {
+      const shapes = document.querySelector('.shapes');
+      const shapeTypes = ['circle', 'square', 'triangle'];
+      const colors = ['rgba(120, 76, 251, 0.2)', 'rgba(120, 76, 251, 0.25)', 'rgba(120, 76, 251, 0.3)'];
+
+      for (let i = 0; i < 200; i++) {
+        const shape = document.createElement('div');
+        const shapeType = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+
+        shape.classList.add('shape');
+        shape.classList.add(shapeType);
+        shape.style.top = `${Math.random() * 80 + 10}%`;
+        shape.style.left = `${Math.random() * 80 + 10}%`;
+        shape.style.opacity = `${Math.random() * 0.3 + 0.1}`;
+        shape.style.animationDelay = `${Math.random() * 5}s`;
+
+        if (shapeType === 'circle') {
+          shape.style.width = `${Math.random() * 40 + 20}px`;
+          shape.style.height = shape.style.width;
+          shape.style.backgroundColor = color;
+          shape.style.borderRadius = '50%';
+        } else if (shapeType === 'square') {
+          shape.style.width = `${Math.random() * 40 + 20}px`;
+          shape.style.height = shape.style.width;
+          shape.style.backgroundColor = color;
+          shape.style.transform = `rotate(${Math.random() * 45}deg)`;
+        }
+
+        shapes.appendChild(shape);
+      }
+    }
+
+    window.onload = createRandomShapes;
+  </script>
+</body>
+
+</html>

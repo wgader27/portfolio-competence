@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAE 4.01 - Développer pour le web</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <header id="header">
+      <div class="overlay overlay-lg"></div>
+
+      <nav>
+        <div class="container">
+          <h1>Portfolio de Compétence</h1>
+          <div class="links">
+            <ul>
+              <li>
+                <a href="../../../index.html#header">Home</a>
+              </li>
+              <li>
+                <a href="../../../annee1/index.html">Année 1</a>
+              </li>
+              <li>
+                <a href="../../../annee2/index.html">Année 2</a>
+              </li>
+              <li>
+                <a href="../../../annee3/index.html">Année 3</a>
+              </li>
+              <li>
+                <a href="../../../index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="portfolio-item section">
+      <div class="container">
+        <div class="shapes">
+          <div class="shape circle"></div>
+          <div class="shape square"></div>
+          <div class="shape triangle"></div>
+          <div class="shape x-shape"></div>
+        </div>
+        <div class="section-header">
+          <h3 class="title" data-title="Développer">SAE 4.01 : Développer pour le web</h3>
+          <p class="text">
+            Réalisée en mars-avril 2026
+          </p>
+        </div>
+
+        <div class="portfolio-content">
+          <div class="portfolio-description">
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Concevoir et développer une application web complète, individuellement, en cinq semaines</li>
+              <li>Mettre en place un back office pour la gestion des données et une interface client riche</li>
+              <li>Veiller à la sécurité, à la performance et à l'hébergement de l'application</li>
+              <li>Travailler en méthode itérative, avec validation par cycle avant de passer au suivant</li>
+            </ul>
+
+            <div class="portfolio-img">
+              <img src="../../../img/sae/sae401-1.png" alt="Sphere - page d'accueil desktop" />
+            </div>
+
+            <h4>Présentation du projet</h4>
+            <p>
+              Pour cette SAE, le sujet était de créer mon propre réseau social, à la manière de Twitter ou Instagram.
+              J'ai appelé le mien <strong>Sphere</strong>. Côté technique, le projet imposait l'utilisation de Symfony en
+              back, avec Doctrine pour la persistance MySQL, et React + TypeScript + Tailwind en front. Le tout dans des
+              conteneurs Docker. Le back office d'administration devait être réalisé avec EasyAdmin.
+            </p>
+            <p>
+              Le projet était organisé en cycles (de A à G), chacun regroupant plusieurs itérations. Chaque cycle devait
+              être hébergé, testé et validé par le professeur avant de passer au suivant.
+            </p>
+
+            <h4>Charte graphique et maquettage</h4>
+            <p>
+              Avant de coder, j'ai posé une identité visuelle sur Figma : un mode sombre dominant, un vert lime en
+              accent, et la typographie Anton pour le wordmark. J'ai ensuite maquetté chaque cycle avant de le
+              développer, ce qui m'a évité de revenir trois fois sur la même fonctionnalité. Cette phase m'a permis de
+              mobiliser la ressource <strong>R4.03 Design d'expérience</strong>.
+            </p>
+
+            <div class="portfolio-img">
+              <img src="../../../img/sae/sae401-2.png" alt="Sphere version mobile" />
+            </div>
+
+            <h4>Développement Front</h4>
+            <p>
+              J'ai développé toute la partie cliente en React + TypeScript avec Tailwind. J'ai utilisé React Router DOM
+              pour gérer les routes en client-side rendering, et découpé l'interface en composants réutilisables (Tweet,
+              Avatar, Modal, etc.). L'application est entièrement responsive : sur desktop la sidebar est complète, sur
+              mobile elle bascule en barre de navigation en bas d'écran.
+            </p>
+            <p>
+              Je pense ainsi avoir validé l'<strong>AC24.01 - Produire des pages et applications Web responsives</strong>,
+              en mobilisant la ressource <strong>R4.06 Développement front</strong>.
+            </p>
+
+            <h4>Développement Back et API</h4>
+            <p>
+              Le back est constitué de deux parties. D'un côté, une <strong>API REST</strong> en Symfony qui dialogue
+              avec le front en JSON (authentification, posts, likes, abonnements). De l'autre, un <strong>back office
+              d'administration</strong> monté avec EasyAdmin pour gérer les comptes, les contenus, et la modération.
+              Doctrine gère la persistance vers MySQL.
+            </p>
+            <p>
+              Cette partie m'a permis de valider l'<strong>AC24.02 - Mettre en place ou développer un back office</strong>
+              et l'<strong>AC24.04 - Modéliser les traitements d'une application web</strong>, en mobilisant la
+              ressource <strong>R4.07 Développement back</strong>.
+            </p>
+
+            <div class="portfolio-img">
+              <img src="../../../img/sae/sae401-3.png" alt="Back office EasyAdmin de Sphere" />
+            </div>
+
+            <h4>Sécurité et authentification</h4>
+            <p>
+              Une bonne partie des itérations était centrée sur la sécurité des comptes : politique de mot de passe
+              robuste, confirmation par email avant connexion, réinitialisation par lien à durée limitée, mode compte
+              privé avec validation des abonnés, et suppression de compte. Cela m'a fait travailler la sécurité des
+              systèmes et des données.
+            </p>
+
+            <h4>Hébergement et optimisation</h4>
+            <p>
+              À la fin de chaque cycle validé, je devais héberger ma version sur le serveur <strong>mmi.unilim.fr</strong>.
+              J'ai déployé le front buildé avec Vite et le back Symfony via FileZilla et SSH. J'ai aussi optimisé le
+              chargement (compression des images, minification du JS/CSS, lazy-loading), et je suis monté à un bon score
+              Lighthouse en performance.
+            </p>
+            <p>
+              Je valide ici l'<strong>AC24.05 - Optimiser une application web</strong> et l'<strong>AC24.06 - Configurer
+              une solution d'hébergement adaptée aux besoins</strong>, en m'appuyant sur la ressource
+              <strong>R4.08 Déploiement de services</strong>.
+            </p>
+
+            <h4>Gestion de projet et itération</h4>
+            <p>
+              Le découpage en cycles m'a vraiment poussé à travailler en itératif. Tout est passé par GitHub, avec une
+              branche par cycle (<em>Cycle-x</em>) et un merge dans la branche main une fois tout validé.
+              Cette méthode m'a permis de garder un historique propre et de ne jamais lancer le cycle suivant si
+              l'actuel n'était pas 100% fonctionnel. Le fait de devoir présenter mon travail au professeur à la fin de
+              chaque cycle m'a aussi fait travailler les codes des productions professionnelles.
+            </p>
+            <p>
+              Cela me permet de valider l'<strong>AC25.01 - Gérer un projet avec une méthode d'amélioration continue</strong>
+              et l'<strong>AC25.05 - Maîtriser les codes des productions écrites et orales professionnelles</strong>.
+            </p>
+
+            <div class="portfolio-img">
+              <img src="../../../img/sae/sae401-4.png" alt="Page github" />
+            </div>
+
+            <h4>Bilan</h4>
+            <p>
+              Cette SAE est de loin le projet le plus complet que j'ai mené depuis le début du BUT. J'ai énormément
+              progressé sur Symfony et sur l'architecture API REST + front React, deux choses que je ne maîtrisais pas
+              vraiment avant. Le découpage en cycles m'a aussi appris une chose importante : finir une fonctionnalité
+              proprement vaut mieux que d'en commencer trois à moitié. Sphere n'est pas parfaite, certaines parties
+              mériteraient d'être réécrites, mais le résultat est fonctionnel, hébergé, et c'est un projet sur lequel je
+              pourrai m'appuyer pour la suite, que ce soit en troisième année ou pour mes prochains stages.
+            </p>
+
+            <div class="pdf__container">
+              <h4>Liens du projet</h4>
+              <div class="pdf-files">
+                <a href="https://mmi.unilim.fr/~gader3/SAE401/frontend/dist/" target="_blank">Voir Sphere</a>
+                <a href="https://github.com/wgader/SAE401" target="_blank">Code source GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="competences-box">
+            <h4>Compétences développées</h4>
+            <div class="competence-item">
+              <span class="competence-code">AC24.01</span>
+              <p class="competence-desc">Produire des pages et applications Web responsives</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.02</span>
+              <p class="competence-desc">Mettre en place ou développer un back office</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.04</span>
+              <p class="competence-desc">Modéliser les traitements d'une application Web</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.05</span>
+              <p class="competence-desc">Optimiser une application web en termes de référencement et de temps de chargement</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC24.06</span>
+              <p class="competence-desc">Configurer une solution d'hébergement adaptée aux besoins</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC25.01</span>
+              <p class="competence-desc">Gérer un projet avec une méthode d'amélioration continue (par exemple une méthode agile)</p>
+            </div>
+            <div class="competence-item">
+              <span class="competence-code">AC25.05</span>
+              <p class="competence-desc">Maîtriser les codes des productions écrites et orales professionnelles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-4">
+        <div class="grid-4-col footer-about">
+          <h3 class="title-sm">À propos</h3>
+          <p class="text">
+            Portfolio de compétences développées dans le cadre du BUT Métiers du Multimédia et de l'Internet, présentant les différentes SAE réalisées.
+          </p>
+        </div>
+
+        <div class="grid-4-col footer-links">
+          <h3 class="title-sm">Liens</h3>
+          <ul>
+            <li><a href="../../../index.html">Accueil</a></li>
+            <li><a href="../../../annee1/index.html">Année 1</a></li>
+            <li><a href="../../../annee2/index.html">Année 2</a></li>
+            <li><a href="../../../annee3/index.html">Année 3</a></li>
+            <li><a href="../../../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="grid-4-col footer-links">
+          <h3 class="title-sm">Compétences</h3>
+          <ul>
+            <li><a href="#">Design Web</a></li>
+            <li><a href="#">Développement Web</a></li>
+            <li><a href="#">Communication visuelle</a></li>
+            <li><a href="#">Audiovisuel</a></li>
+            <li><a href="#">Gestion de projet</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom-footer">
+        <div class="copyright">
+          <p class="text">
+            Copyright&copy;2025 Tous droits réservés | Réalisé par
+            <span>Wahel</span>
+          </p>
+        </div>
+
+        <div class="followme-wrap">
+          <div class="followme">
+            <h3>Suivez-moi</h3>
+            <span class="footer-line"></span>
+            <div class="social-media">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="back-btn-wrap">
+            <a href="#" class="back-btn">
+              <i class="fas fa-chevron-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function createRandomShapes() {
+      const shapes = document.querySelector('.shapes');
+      const shapeTypes = ['circle', 'square', 'triangle'];
+      const colors = ['rgba(120, 76, 251, 0.2)', 'rgba(120, 76, 251, 0.25)', 'rgba(120, 76, 251, 0.3)'];
+
+      for (let i = 0; i < 200; i++) {
+        const shape = document.createElement('div');
+        const shapeType = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+
+        shape.classList.add('shape');
+        shape.classList.add(shapeType);
+        shape.style.top = `${Math.random() * 80 + 10}%`;
+        shape.style.left = `${Math.random() * 80 + 10}%`;
+        shape.style.opacity = `${Math.random() * 0.3 + 0.1}`;
+        shape.style.animationDelay = `${Math.random() * 5}s`;
+
+        if (shapeType === 'circle') {
+          shape.style.width = `${Math.random() * 40 + 20}px`;
+          shape.style.height = shape.style.width;
+          shape.style.backgroundColor = color;
+          shape.style.borderRadius = '50%';
+        } else if (shapeType === 'square') {
+          shape.style.width = `${Math.random() * 40 + 20}px`;
+          shape.style.height = shape.style.width;
+          shape.style.backgroundColor = color;
+          shape.style.transform = `rotate(${Math.random() * 45}deg)`;
+        }
+
+        shapes.appendChild(shape);
+      }
+    }
+
+    window.onload = createRandomShapes;
+  </script>
+</body>
+
+</html>
